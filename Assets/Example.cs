@@ -19,5 +19,15 @@ public class Example : MonoBehaviour
         {
             SoundManager.Instance.Play(2);
         }
+
+
+        if (GUI.Button(new Rect(10, 130, 150, 30), "Play BGM1"))
+        {
+            SoundManager.Instance.PlayBgm(0);
+        }
+        if (GUI.Button(new Rect(10, 170, 150, 30), "Play BGM2"))
+        {
+            SoundManager.Instance.PlayBgm(1);
+        }
     }
 }

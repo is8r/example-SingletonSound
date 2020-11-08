@@ -13,19 +13,31 @@ namespace SoundManagement
     public class SoundManager : SoundManagement.SingletonMonoBehaviour<SoundManager>
     {
         //音源を登録する配列
-        public AudioClip[] audios;
+        public AudioClip[] seClips;
+        public AudioClip[] bgmClips;
+
+        //オーディオソース
+        public AudioSource seAudioSource;
+        public AudioSource bgmAudioSource;
 
         //外部から呼び出す
         public void Play(int n = 0)
         {
-            //オーディオソースを呼び出す
-            AudioSource audiosource = GetComponent<AudioSource>();
-
             //再生中のスクリプトを停止する
-            audiosource.Stop();
+            seAudioSource.Stop();
 
             //オーディオソースを再生する
-            audiosource.PlayOneShot(audios[n]);
+            seAudioSource.PlayOneShot(seClips[n]);
+        }
+
+        //外部から呼び出す
+        public void PlayBgm(int n = 0)
+        {
+            //再生中のスクリプトを停止する
+            bgmAudioSource.Stop();
+
+            //オーディオソースを再生する
+            bgmAudioSource.PlayOneShot(bgmClips[n]);
         }
     }
 }

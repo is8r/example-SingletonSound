@@ -2,7 +2,7 @@
 
 ![](images/0.png)
 
-
 使用させていただいた素材:
 
 - 効果音ラボ | 演出・アニメ[1] https://soundeffect-lab.info/sound/anime/
+- mixkit | https://mixkit.co/free-stock-music/
